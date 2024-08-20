@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comment Form</title>
+  <style>
+    /* CSS cho phần form */
+    .comment-form {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    
+    /* CSS cho các trường nhập liệu */
+    .comment-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .comment-form input[type="text"],
+    .comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .comment-form input[type="submit"] {
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* CSS cho comment đã đăng */
+    .comment {
+      background-color: #f9f9f9;
+      border-left: 5px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    
+    .comment .author {
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .comment .content {
+      margin-top: 5px;
+    }
+    .comment.mine {
+      text-align: right;
+      border-left-color: #ff9900; /* Màu sắc tương ứng với comment của bạn */
+    }
+    
+    .comment.mine .author {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="comment">
+    <span class="author">Người dùng A:</span>
+    <div class="content">
+      Sản phẩm này thực sự là một phát minh đáng kinh ngạc! Tôi đã mua và không thể tin nổi rằng nó có thể thay đổi cuộc sống của tôi. Đây là một sản phẩm tuyệt vời và tôi sẽ giới thiệu cho bạn bè của tôi.
+    </div>
+  </div>
+  
+  <div class="comment">
+    <span class="author">Người dùng B:</span>
+    <div class="content">
+      Tôi đã mua sản phẩm này và mất đi hết niềm tin vào cuộc sống. Chất lượng kém và không hoạt động như quảng cáo. Tôi thật sự thất vọng và không khuyến khích ai mua nó.
+    </div>
+  </div>
+  
+  <div class="comment mine">
+    <span class="author">you comment:</span>
+    <div class="content">
+      Tôi đã mua sản phẩm này và mất đi hết niềm tin vào cuộc sống. Chất lượng kém và không hoạt động như quảng cáo. Tôi thật sự thất vọng và không khuyến khích ai mua nó.
+    </div>
+  </div>
+
+  <div class="comment-form">
+    <h2>Phản hồi khách hàng</h2>
+    <form>
+      <label for="comment">Nội dung:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+      <input type="submit" value="Đăng comment">
+    </form>
+  </div>
+</body>
+</html>
